@@ -14,7 +14,6 @@
 }
 
 .header {
-    padding: 0px 30px;
     width: 100%;
     position: fixed;
     background-color: var(--white);
@@ -31,6 +30,10 @@
     align-items: center;
     fill: var(--text);
     overflow-x: hidden;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0px 20px;
+
 }
 
 .first-portion .rounded {
@@ -73,6 +76,9 @@
     overflow-x: hidden;
     align-items: center;
     background-color: var(--white);
+    max-width: 1300px;
+    padding: 0px 20px;
+
 }
 
 .location {
@@ -133,6 +139,7 @@ select {
 .hover:hover {
     cursor: pointer;
     filter: brightness(70%);
+    transition: all 0.3s ;
 }
 
 .search-logo {
@@ -187,10 +194,13 @@ select {
 }
 
 .categories-list {
-    padding: 0px 30px;
+    padding: 0px 20px;
     overflow-x: hidden;
     display: flex;
     gap: 15px;
+    
+    max-width: 1300px;
+    margin: auto;
 }
 
 .categories-list a {
@@ -225,8 +235,10 @@ select {
 }
 
 .categories {
-    padding: 0px 30px;
-
+    padding: 0px 20px;
+    
+    max-width: 1300px;
+    margin: auto;
 }
 
 .products .product-item {
@@ -237,14 +249,16 @@ select {
 }
 
 .products {
-    padding: 0px 30px;
+    padding: 0px 20px;
     display: flex;
     gap: 20px;
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-
+.backk{
+    background-color: #002f34;
+}
 .products::-webkit-scrollbar {
     display: none;
 }
@@ -274,7 +288,10 @@ select {
     margin-bottom: 10px;
     color: #494949;
 }
-
+.main-section{
+    max-width: 1300px;
+    margin: auto;
+}
 .main-section .upper {
     padding: 50px 30px 20px 30px;
 
@@ -293,7 +310,11 @@ select {
     justify-content: space-between;
     align-items: center;
 }
+.back{
+    background-color: #f7f8f9;
+    margin-top: 50px;
 
+}
 .app-advs {
     margin-top: 50px;
     width: 100%;
@@ -302,7 +323,9 @@ select {
     align-items: center;
     height: 200px;
     background-color: #f7f8f9;
-    overflow-x: hidden;
+    overflow: hidden;
+    max-width: 1300px;
+    margin: auto;
 }
 
 .app-advs .links-portion {
@@ -362,6 +385,8 @@ select {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
+    max-width: 1300px;
+    margin: auto;
 }
 
 .footer {
@@ -404,6 +429,9 @@ select {
     padding: 10px;
     color: var(--white);
     text-align: end;
+    
+    max-width: 1300px;
+    margin: auto;
 }
 
 .copyRight a {
@@ -415,10 +443,14 @@ select {
     color: #000000;
     text-decoration: none;
 }
-
+@media only screen and (max-width: 1200px) {
+    .header{
+        padding:0px;
+    } 
+}
 @media only screen and (max-width: 800px) {
 
-    .header,
+    
     .categories-list,
     .products {
         padding: 0px 0px 0px 20px;
