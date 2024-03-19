@@ -4,12 +4,13 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
-:root{
-    --black:#000000;
-    --text:#002f34;
-    --border:#c6c6c6;
-    --blue:#3a77ff;
-    --white:#ffffff;
+
+:root {
+    --black: #000000;
+    --text: #002f34;
+    --border: #c6c6c6;
+    --blue: #3a77ff;
+    --white: #ffffff;
 }
 
 .header {
@@ -38,8 +39,8 @@
 
 .property:hover,
 .motors:hover {
-    color:var(--blue);
-    fill:var(--blue) ;
+    color: var(--blue);
+    fill: var(--blue);
 }
 
 .first-portion .rounded {
@@ -76,7 +77,7 @@
 
 .location {
     display: flex;
-    border: 1px solid var(--border) ;
+    border: 1px solid var(--border);
     min-width: 280px;
     align-items: center;
     justify-content: space-evenly;
@@ -397,17 +398,20 @@ select {
     flex-direction: column;
     gap: 10px;
 }
-.copyRight{
+
+.copyRight {
     background-color: var(--text);
     padding: 10px;
     color: var(--white);
     text-align: end;
 }
-.copyRight a{
+
+.copyRight a {
     color: var(--white);
     padding-right: 20px;
 }
-.copyRight a:hover{
+
+.copyRight a:hover {
     color: #000000;
     text-decoration: none;
 }
@@ -419,8 +423,9 @@ select {
     .products {
         padding: 0px 0px 0px 20px;
     }
-    .footer-content{
-        padding: 0px 20px  ;
+
+    .footer-content {
+        padding: 0px 20px;
     }
 
     .categories-list {
@@ -551,12 +556,14 @@ select {
         align-items: center;
         gap: 10px;
     }
-    .copyRight{
+
+    .copyRight {
         text-align: center;
 
-    }   
-    .copyRight a{
-        padding-right:0px;
+    }
+
+    .copyRight a {
+        padding-right: 0px;
     }
 
 }
