@@ -1,24 +1,24 @@
 const bikes = [
   {
-    name: "Giant Propel Advanced Pro",
+    name: "Giant Propel",
     price: 6200.0,
     imageUrl:
       "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmlrZXN8ZW58MHx8MHx8fDA%3D",
   },
   {
-    name: "Cannondale SuperSix EVO",
+    name: "Cannondale",
     price: 9000.0,
     imageUrl:
       "https://images.unsplash.com/photo-1622185135505-2d795003994a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmlrZXN8ZW58MHx8MHx8fDA%3D",
   },
   {
-    name: "Bianchi Oltre XR4",
+    name: "Bianchi ",
     price: 11000.0,
     imageUrl:
       "https://images.unsplash.com/photo-1610100177133-cb4788574137?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJpa2VzfGVufDB8fDB8fHww",
   },
   {
-    name: "Scott Addict RC Ultimate",
+    name: "Scott Addict",
     price: 13000.0,
     imageUrl:
       "https://images.unsplash.com/photo-1627366197691-e0d5cee520bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJpa2VzfGVufDB8fDB8fHww",
@@ -42,7 +42,7 @@ const bikes = [
       "https://images.unsplash.com/photo-1627062598433-016841c1f1e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGJpa2VzfGVufDB8fDB8fHww",
   },
   {
-    name: "Wilier Triestina Zero SLR",
+    name: "Wilier Triestina",
     price: 10500.0,
     imageUrl:
       "https://images.unsplash.com/photo-1622547918989-02ebc7a89eb0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODd8fGJpa2VzfGVufDB8fDB8fHww",
@@ -297,7 +297,11 @@ let cartItems = document.querySelector(".cart-items");
 function addToCart(el){
     cart.push(el)
     el.qty = 1
-    cartItems.innerHTML += `
+
+
+
+
+      cartItems.innerHTML += `
       <div class="cart-item">
                 <img src="${el.imageUrl}">
                 <div class="item-details">
@@ -307,6 +311,8 @@ function addToCart(el){
                 </div>
             </div>
     `
+
+  
 }
 
 
