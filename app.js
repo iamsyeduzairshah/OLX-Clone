@@ -132,8 +132,8 @@
 
 function addMobiles() {
     for (let i = 0; i < mobiles.length; i++) {
-        let mobile = document.querySelector(".mobiles")
-        mobile.innerHTML +=`
+        let product = document.querySelector(".mobiles")
+        product.innerHTML +=`
         <div class="product-item">
           <img src="${mobiles[i].imageUrl}" alt="for sale" class="hover" />
           <div class="first-line">
@@ -149,3 +149,78 @@ function addMobiles() {
     }
 }
 addMobiles()
+
+
+
+
+const laptops = [
+ 
+    {
+        name: "Dell XPS 13",
+        price: 1299.99,
+        imageUrl: "https://plus.unsplash.com/premium_photo-1681566925246-cc584a44d7fe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGFwdG9wc3xlbnwwfHwwfHx8MA%3D%3D",
+      },
+      {
+        name: "MacBook Pro ",
+        price: 2399.99,
+        imageUrl: "https://images.unsplash.com/photo-1611078489935-0cb964de46d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wc3xlbnwwfHwwfHx8MA%3D%3D",
+      },
+      {
+        name: "HP Spectre",
+        price: 1499.99,
+        imageUrl: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bGFwdG9wc3xlbnwwfHwwfHx8MA%3D%3D",
+      },
+      {
+        name: "Lenovo ThinkPad",
+        price: 1699.99,
+        imageUrl: "https://images.unsplash.com/photo-1542393545-10f5cde2c810?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxhcHRvcHN8ZW58MHx8MHx8fDA%3D",
+      },
+      {
+        name: "Asus ZenBook 14",
+        price: 1099.99,
+        imageUrl: "https://images.unsplash.com/photo-1566647387313-9fda80664848?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxhcHRvcHN8ZW58MHx8MHx8fDA%3D",
+      },
+      {
+        name: "Microsoft Surface",
+        price: 1299.99,
+        imageUrl: "https://images.unsplash.com/photo-1584433305355-9cb73387fc61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGxhcHRvcHN8ZW58MHx8MHx8fDA%3D",
+      },
+      {
+        name: "Acer Swift 5",
+        price: 999.99,
+        imageUrl: "https://images.unsplash.com/photo-1602080858428-57174f9431cf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGxhcHRvcHN8ZW58MHx8MHx8fDA%3D",
+      },
+      {
+        name: "Pixelbook Go",
+        price: 649.99,
+        imageUrl: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhcHRvcHN8ZW58MHx8MHx8fDA%3D",
+      },
+      {
+        name: "Samsung Book Flex",
+        price: 1299.99,
+        imageUrl: "https://images.unsplash.com/photo-1578950435899-d1c1bf932ab2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGxhcHRvcHN8ZW58MHx8MHx8fDA%3D",
+      }
+  ];
+  
+
+  function addLaptops() {
+    for (let i = 0; i < laptops.length; i++) {
+        let product = document.querySelector(".laptops")
+        product.innerHTML +=`
+        <div class="product-item">
+          <img src="${laptops[i].imageUrl}" alt="for sale" class="hover" />
+          <div class="first-line">
+            <h4>${laptops[i].price}</h4>
+            <img class="hover" src="Images/heart.svg" alt="" />
+          </div>
+          <div class="name">
+            <h5>${laptops[i].name}</h5>
+          </div>
+          <div class="info">Karachi,Sindh <br />1 day ago</div>
+        </div>
+        `
+    }
+}
+addLaptops()
+
+  
