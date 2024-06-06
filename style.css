@@ -304,6 +304,8 @@ select {
 .back {
   background-color: #f7f8f9;
   margin-top: 50px;
+  /* width: 2000px;  */
+  /* margin: auto;  */
 }
 .app-advs {
   margin-top: 50px;
@@ -418,7 +420,6 @@ select {
   padding: 10px;
   color: var(--white);
   text-align: end;
-
   max-width: 1300px;
   margin: auto;
 }
@@ -589,5 +590,25 @@ select {
 
   .copyRight a {
     padding-right: 0px;
+  }
+  .products ,
+  .categories-list,
+  .categories{
+     -ms-overflow-style: none;
+    scrollbar-width:none; 
+  }
+  .products::-webkit-scrollbar,
+  .categories-list::-webkit-scrollbar {
+    display: none !important; 
+  }
+  .header {
+    position:absolute;
+  }
+  .location {
+    display: none;
+  }
+  .items{
+    margin-left: 0px;
+    min-width: 300px;
   }
 }
