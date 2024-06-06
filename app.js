@@ -1,90 +1,140 @@
-// const bikes = [
-//     {
-//       name: "Giant Propel Advanced Pro",
-//       price: 6200.00,
-//       imageUrl: "el-advanced-pro.jpg"
-//     },
-//     {
-//       name: "Cannondale SuperSix EVO",
-//       price: 9000.00,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "Bianchi Oltre XR4",
-//       price: 11000.00,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "Scott Addict RC Ultimate",
-//       price: 13000.00,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "Cervelo S5",
-//       price: 11500.00,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "",
-//       price: 12500.00,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "Colnago V3Rs",
-//       price: 12000.00,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "Wilier Triestina Zero SLR",
-//       price: 10500.00,
-//       imageUrl: ""
-//     }
-//   ];
-//   const cars = [
-//     {
-//       name: "Tesla Model S",
-//       price: 79999.99,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "BMW 3 Series",
-//       price: 41250.00,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "Audi A4",
-//       price: 39900.00,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "Mercedes-Benz C-Class",
-//       price: 41500.00,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "Lexus IS",
-//       price: 38500.00,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "Honda Accord",
-//       price: 24970.00,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "Toyota Camry",
-//       price: 24425.00,
-//       imageUrl: ""
-//     },
-//     {
-//       name: "Chevrolet Malibu",
-//       price: 22395.00,
-//       imageUrl: ""
-//     }
-//   ];
-  
+const bikes = [
+    {
+      name: "Giant Propel Advanced Pro",
+      price: 6200.00,
+      imageUrl: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmlrZXN8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      name: "Cannondale SuperSix EVO",
+      price: 9000.00,
+      imageUrl: "https://images.unsplash.com/photo-1622185135505-2d795003994a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmlrZXN8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      name: "Bianchi Oltre XR4",
+      price: 11000.00,
+      imageUrl: "https://images.unsplash.com/photo-1610100177133-cb4788574137?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJpa2VzfGVufDB8fDB8fHww"
+    },
+    {
+      name: "Scott Addict RC Ultimate",
+      price: 13000.00,
+      imageUrl: "https://images.unsplash.com/photo-1627366197691-e0d5cee520bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJpa2VzfGVufDB8fDB8fHww"
+    },
+    {
+      name: "Cervelo S5",
+      price: 11500.00,
+      imageUrl: "https://images.unsplash.com/photo-1622185135825-d34b40aa03ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGJpa2VzfGVufDB8fDB8fHww"
+    },
+    {
+      name: "BMW z10R",
+      price: 12500.00,
+      imageUrl: "https://images.unsplash.com/photo-1568816642854-e5a99030f9af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGJpa2VzfGVufDB8fDB8fHww"
+    },
+    {
+      name: "Colnago V3Rs",
+      price: 12000.00,
+      imageUrl: "https://images.unsplash.com/photo-1627062598433-016841c1f1e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGJpa2VzfGVufDB8fDB8fHww"
+    },
+    {
+      name: "Wilier Triestina Zero SLR",
+      price: 10500.00,
+      imageUrl: "https://images.unsplash.com/photo-1622547918989-02ebc7a89eb0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODd8fGJpa2VzfGVufDB8fDB8fHww"
+    }
+  ];
 
-  let mobiles = [
+
+  function addBikes() {
+    for (let i = 0; i < bikes.length; i++) {
+        let product = document.querySelector(".bikes")
+        product.innerHTML +=`
+        <div class="product-item">
+          <img src="${bikes[i].imageUrl}" alt="for sale" class="hover" />
+          <div class="first-line">
+            <h4>${bikes[i].price}</h4>
+            <img class="hover" src="Images/heart.svg" alt="" />
+          </div>
+          <div class="name">
+            <h5>${bikes[i].name}</h5>
+          </div>
+          <div class="info">Karachi,Sindh <br />1 day ago</div>
+        </div>
+        `
+    }
+}
+addBikes()
+
+
+
+
+
+
+
+
+
+  const cars = [
+    {
+      name: "Tesla Model S",
+      price: 79999.99,
+      imageUrl: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      name: "BMW 3 Series",
+      price: 41250.00,
+      imageUrl: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      name: "Audi A4",
+      price: 39900.00,
+      imageUrl: "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      name: "Mercedes-Benz C-Class",
+      price: 41500.00,
+      imageUrl: "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNhcnN8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      name: "Lexus IS",
+      price: 38500.00,
+      imageUrl: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNhcnN8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      name: "Honda Accord",
+      price: 24970.00,
+      imageUrl: "https://images.unsplash.com/photo-1555353540-64580b51c258?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcnN8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      name: "Toyota Camry",
+      price: 24425.00,
+      imageUrl: "https://images.unsplash.com/photo-1542362567-b07e54358753?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNhcnN8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      name: "Chevrolet Malibu",
+      price: 22395.00,
+      imageUrl: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGNhcnN8ZW58MHx8MHx8fDA%3D"
+    }
+  ];
+  function addCars() {
+    for (let i = 0; i < cars.length; i++) {
+        let product = document.querySelector(".cars")
+        product.innerHTML +=`
+        <div class="product-item">
+          <img src="${cars[i].imageUrl}" alt="for sale" class="hover" />
+          <div class="first-line">
+            <h4>${cars[i].price}</h4>
+            <img class="hover" src="Images/heart.svg" alt="" />
+          </div>
+          <div class="name">
+            <h5>${cars[i].name}</h5>
+          </div>
+          <div class="info">Karachi,Sindh <br />1 day ago</div>
+        </div>
+        `
+    }
+}
+addCars()
+
+
+
+const mobiles = [
     {
       name: "OnePlus 9 Pro",
       price: 969.99,
@@ -126,10 +176,7 @@
       imageUrl: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9iaWxlc3xlbnwwfHwwfHx8MA%3D%3D"
     },
 
-  ];
-  
-
-
+];
 function addMobiles() {
     for (let i = 0; i < mobiles.length; i++) {
         let product = document.querySelector(".mobiles")
@@ -200,10 +247,8 @@ const laptops = [
         price: 1299.99,
         imageUrl: "https://images.unsplash.com/photo-1578950435899-d1c1bf932ab2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGxhcHRvcHN8ZW58MHx8MHx8fDA%3D",
       }
-  ];
-  
-
-  function addLaptops() {
+];
+function addLaptops() {
     for (let i = 0; i < laptops.length; i++) {
         let product = document.querySelector(".laptops")
         product.innerHTML +=`
