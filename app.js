@@ -292,16 +292,10 @@ addCars();
 
 let cart = []
 let cartItems = document.querySelector(".cart-items");
-
-
-function addToCart(el){
-    cart.push(el)
-    el.qty = 1
-
-
-
-
-      cartItems.innerHTML += `
+function addToCart(el) {
+  cart.push(el)
+  el.qty = 1
+  cartItems.innerHTML += `
       <div class="cart-item">
                 <img src="${el.imageUrl}">
                 <div class="item-details">
@@ -311,8 +305,6 @@ function addToCart(el){
                 </div>
             </div>
     `
-
-  
 }
 
 
