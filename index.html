@@ -68,7 +68,7 @@
       </div>
       <div class="flex">
         <div class="items">
-          <input type="search" placeholder="Find Cars,Mobile Phones and more... " class="items-search" />
+          <input type="search" name="search" placeholder="Find Cars,Mobile Phones and more... " class="items-search" />
         </div>
         <div class="search-logo hover">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024" class="_4743d0f8">
@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="login">
-        <a href="#">Login</a>
+        <a href="https://accounts.google.com/">Login</a>
       </div>
       <div class="sell hover">
         <img src="Images/svg16.svg" alt="plus" />
@@ -167,7 +167,7 @@
   <div class="main-section">
     <div class="upper">
       <h1>Bikes</h1>
-      <div class="view hover">
+      <div class="view hover" onclick="addBikes()">
         View More &nbsp;
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="_2e0d1516" viewBox="0 0 32 32">
           <path
@@ -181,7 +181,7 @@
     </div>
     <div class="upper">
       <h1>Cars</h1>
-      <div class="view hover">
+      <div class="view hover" onclick="addCars()">
         View More &nbsp;
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="_2e0d1516" viewBox="0 0 32 32">
           <path
@@ -195,7 +195,7 @@
     </div>
     <div class="upper">
       <h1>Mobiles</h1>
-      <div class="view hover">
+      <div class="view hover" onclick="addMobiles()">
         View More &nbsp;
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="_2e0d1516" viewBox="0 0 32 32">
           <path
@@ -209,7 +209,7 @@
     </div>
     <div class="upper">
       <h1>Laptops</h1>
-      <div class="view hover">
+      <div class="view hover" onclick="addLaptops()">
         View More &nbsp;
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="_2e0d1516" viewBox="0 0 32 32">
           <path
@@ -312,10 +312,10 @@
       <h1 >Cart</h1>
     </div>
   </a> -->
-  <div>your cart </div>
-
-  <p class="cart-items">
-</p>
+  <h1>Your cart</h1>
+  <div class="cart-items">
+</div>
+<h1 class="total"></h1>
     <script src="app.js"></script>
 </body>
 
