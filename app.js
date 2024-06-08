@@ -1,3 +1,4 @@
+// these are the array of objects .the main data .
 const bikes = [
   {
     name: "Giant Propel",
@@ -208,6 +209,7 @@ const laptops = [
   },
 ];
 
+// these are the functions it will run on reload and on click on "view more".
 function addLaptops() {
   for (let i = 0; i < laptops.length; i++) {
     let product = document.querySelector(".laptops");
@@ -288,31 +290,28 @@ function addCars() {
 }
 addCars();
 
-
-
-let cart = []
+// selecting divs and making main cart array 
+let totalDiv = document.querySelector(".total")
 let cartItems = document.querySelector(".cart-items");
+let cart = []
+
+// this is the main function and will run on click.
 function addToCart(el) {
   let value = cart.includes(el)
   if (value) {
     el.qty += 1;
     updateCart(cart)
     total(cart)
-  } 
+  }
   else {
-      el.qty = 1;
-      updatePage(el)
-      total(cart)
+    el.qty = 1;
+    cart.push(el)
+    updateCart(cart)
+    total(cart)
   }
 }
 
-
-function updatePage(el) {
-    cart.push(el)
-    updateCart(cart)
-}
-
-
+// this function is updating cart items page by adding 
 function updateCart(cart) {
   cartItems.innerHTML = ''
   for (let i = 0; i < cart.length; i++) {
@@ -329,12 +328,11 @@ function updateCart(cart) {
   }
 }
 
-
-let totalDiv = document.querySelector(".total")
+// this function is counting total amount of "cart array" by multiplying QTY by Price. 
 function total(cart) {
-let totalValue = 0 ;
+  let totalValue = 0;
   for (let i = 0; i < cart.length; i++) {
-     totalValue += cart[i].qty * cart[i].price;
-     totalDiv.innerHTML =`Your Total is ${totalValue}`    
+    totalValue += cart[i].qty * cart[i].price;
+    totalDiv.innerHTML = `Your Total is ${totalValue}`
   }
 }
